@@ -1,5 +1,5 @@
 <h1><%= @amusement_park.name %></h1>
-<p>Admissions:</p><%= @amusement_park.admission_price %>
+<p>Admissions: <%= @amusement_park.admission_price %></p>
 
 <p>Rides:</p>
   <% @amusement_park.rides.order("name ASC").each do |ride| %>
@@ -8,4 +8,4 @@
   </ol>
 <% end %>
 
-<p>Average Thrill Rating of Rides:</p> <%= @amusement_park.rides.average_thrill_rating %>
+<p>Average Thrill Rating of Rides: <%= @amusement_park.rides.average_thrill_rating %>/10</p>
