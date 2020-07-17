@@ -2,6 +2,8 @@ require 'rails_helper'
 
 RSpec.describe "Mechanics index page" do
   it "displays all mechanics" do
+    mechanic_1 = Mechanic.create!(name: "Sam Mills", years_of_experience: 10)
+    mechanic_2 = Mechanic.create!(name: "Kara Smith", years_of_experience: 11)
     visit "/mechanics"
 
     expect(page).to have_content("All Mechanics")
