@@ -9,8 +9,6 @@ RSpec.describe "amusement park show page" do
 
     visit "/amusement_parks/#{amusement_park_1.id}"
 
-    save_and_open_page
-
     expect(page).to have_content(amusement_park_1.name)
     expect(page).to have_content(amusement_park_1.admission_price)
 
